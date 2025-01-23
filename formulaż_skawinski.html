@@ -1,13 +1,178 @@
-<!DOCTYPE html> 
-<html lang="pl-PL"> 
-<html> 
-     <head> 
-             <meta charset="utf-8"> 
-	     <META name="Autor" content="Kosma Skawiński" />  
-             <title>   Wykonał skawiński    </title> 
-     </head> 
-<body bgcolor=black>
-<a href="menu.html">WRÓĆ</a><br><br><br><br><br>
-<p align="center"><font size="20"> TU BEDZIE FORMULAŻ </p></font>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Wypożyczalni Rowerów</title>
+    <style>
+        body {
+            background-color: #66FFFF;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .horizontal-group input {
+            margin-right: 10px;
+        }
+
+        .vertical-group input {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formularz Wypożyczalni Rowerów</h1>
+
+    <form>
+
+        <!-- Przyciski BUTTON -->
+        <div class="section">
+            <button type="button" onclick="alert('Sprawdź dostępne rowery!')">Dostępność</button>
+            <button type="button" onclick="alert('Oferta rowerów została zaktualizowana!')">Aktualizuj ofertę</button>
+        </div>
+
+        <!-- INPUT radio: cztery przyciski poziomo -->
+        <div class="section horizontal-group">
+            <label>Wybierz rodzaj roweru :</label>
+            <input type="radio" id="radio1" name="bikeType" value="Górski" checked>
+            <label for="radio1">Górski</label>
+            <input type="radio" id="radio2" name="bikeType" value="Miejski">
+            <label for="radio2">Miejski</label>
+            <input type="radio" id="radio3" name="bikeType" value="Elektryczny">
+            <label for="radio3">Elektryczny</label>
+            <input type="radio" id="radio4" name="bikeType" value="Dziecięcy">
+            <label for="radio4">Dziecięcy</label>
+        </div>
+
+        <!-- INPUT radio: trzy przyciski pionowo -->
+        <div class="section vertical-group">
+            <label>Wybierz czas wypożyczenia :</label>
+            <input type="radio" id="radio5" name="rentalTime" value="1 dzień">
+            <label for="radio5">1 dzień</label>
+            <input type="radio" id="radio6" name="rentalTime" value="Weekend">
+            <label for="radio6">Weekend</label>
+            <input type="radio" id="radio7" name="rentalTime" value="Tydzień">
+            <label for="radio7">Tydzień</label>
+        </div>
+
+        <!-- INPUT radio: pięć przycisków poziomo -->
+        <div class="section horizontal-group">
+            <label>Wybierz dodatkowe wyposażenie :</label>
+            <input type="radio" id="radio8" name="equipment" value="Kask">
+            <label for="radio8">Kask</label>
+            <input type="radio" id="radio9" name="equipment" value="Fotelik dziecięcy">
+            <label for="radio9">Fotelik dziecięcy</label>
+            <input type="radio" id="radio10" name="equipment" value="Oświetlenie">
+            <label for="radio10">Oświetlenie</label>
+            <input type="radio" id="radio11" name="equipment" value="Bagażnik">
+            <label for="radio11">Bagażnik</label>
+            <input type="radio" id="radio12" name="equipment" value="GPS">
+            <label for="radio12">GPS</label>
+        </div>
+
+        <!-- INPUT checkbox: cztery przyciski pionowo -->
+        <div class="section vertical-group">
+            <label>Wybierz akcesoria :</label>
+            <input type="checkbox" id="checkbox1" name="accessory" value="Pompka">
+            <label for="checkbox1">Pompka</label>
+            <input type="checkbox" id="checkbox2" name="accessory" value="Zapasowa dętka">
+            <label for="checkbox2">Zapasowa dętka</label>
+            <input type="checkbox" id="checkbox3" name="accessory" value="Zapięcie">
+            <label for="checkbox3">Zapięcie</label>
+            <input type="checkbox" id="checkbox4" name="accessory" value="Torba rowerowa">
+            <label for="checkbox4">Torba rowerowa</label>
+        </div>
+
+        <!-- INPUT checkbox: trzy przyciski pionowo -->
+        <div class="section vertical-group">
+            <label>Wybierz rodzaj płatności :</label>
+            <input type="checkbox" id="checkbox5" name="payment" value="Gotówka">
+            <label for="checkbox5">Gotówka</label>
+            <input type="checkbox" id="checkbox6" name="payment" value="Karta">
+            <label for="checkbox6">Karta</label>
+            <input type="checkbox" id="checkbox7" name="payment" value="Przelew">
+            <label for="checkbox7">Przelew</label>
+        </div>
+
+        <!-- INPUT checkbox: pięć przycisków poziomo -->
+        <div class="section horizontal-group">
+            <label>Wybierz usługi dodatkowe :</label>
+            <input type="checkbox" id="checkbox8" name="extraService" value="Serwis" checked>
+            <label for="checkbox8">Serwis</label>
+            <input type="checkbox" id="checkbox9" name="extraService" value="Transport">
+            <label for="checkbox9">Transport</label>
+            <input type="checkbox" id="checkbox10" name="extraService" value="Ubezpieczenie">
+            <label for="checkbox10">Ubezpieczenie</label>
+            <input type="checkbox" id="checkbox11" name="extraService" value="Instruktaż">
+            <label for="checkbox11">Instruktaż</label>
+            <input type="checkbox" id="checkbox12" name="extraService" value="Wypożyczenie akcesoriów">
+            <label for="checkbox12">Wypożyczenie akcesoriów</label>
+        </div>
+
+        <!-- Pola tekstowe INPUT -->
+        <div class="section">
+            <label for="text1">Imię i nazwisko:</label>
+            <input type="text" id="text1" name="fullName">
+        </div>
+        <div class="section">
+            <label for="text2">Numer telefonu:</label>
+            <input type="text" id="text2" name="phoneNumber" value="123-456-789">
+        </div>
+        <div class="section">
+            <label for="text3">Adres e-mail:</label>
+            <input type="text" id="text3" name="email" value="klient@example.com">
+        </div>
+        <div class="section">
+            <label for="text4">Data wypożyczenia:</label>
+            <input type="text" id="text4" name="rentalDate" value="2025-01-25">
+        </div>
+        <div class="section">
+            <label for="text5">Uwagi:</label>
+            <input type="text" id="text5" name="comments" value="Proszę o kontakt w razie pytań.">
+        </div>
+
+        <!-- Przyciski wysyłania i czyszczenia -->
+        <div class="section">
+            <input type="submit" value="WYŚLIJ">
+            <input type="reset" value="CZYŚĆ">
+        </div>
+    </form>
 
 </body>
+</html>
